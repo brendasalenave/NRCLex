@@ -57,7 +57,7 @@ class NRCLex:
     """Lexicon source is (C) 2016 National Research Council Canada (NRC) and library is for research purposes only.  Source: http://sentiment.nrc.ca/lexicons-for-research/"""
 
     def __init__(self, lexicon_file='nrc_en.json'):
-        with open(lexicon_file, 'r') as json_file:
+        with open(lexicon_file, 'r',encoding='utf-8') as json_file:
             self.__lexicon__ = load(json_file)
 
     def load_token_list(self, token_list):
